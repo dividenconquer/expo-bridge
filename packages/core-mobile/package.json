@@ -25,8 +25,8 @@
   ],
   "devDependencies": {
     "@react-navigation/native": "^6.0.2",
-    "@seoulcomix/core-bridge": "*",
-    "@seoulcomix/core-navigation": "*",
+    "@seoulcomix/core-bridge": "0.0.1",
+    "@seoulcomix/core-navigation": "0.0.1",
     "@seoulcomix/typescript-config": "0.0.1",
     "@types/react": "^18.2.46",
     "expo-router": "~3.5.14",
