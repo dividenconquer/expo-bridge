@@ -14,6 +14,10 @@ import {
   CoreNavigationPushParams,
 } from "@seoulcomix/core-navigation";
 import { router } from "expo-router";
+import { MMKV } from "react-native-mmkv";
+import { useCoreStorageEventHandler } from "./storage";
+import { useCoreNagivationEventHandler } from "./navigation";
+import { CoreStorageProvider } from "@seoulcomix/core-storage";
 
 export type CoreProviderProps = {
   option: {
@@ -25,6 +29,7 @@ export type CoreProviderProps = {
 
 export const CoreProviders = ({ children, option }: CoreProviderProps) => {
   const coreBridge = useMemo(() => new CoreBridge(), []);
+  const mmkv = useMemo(() => new MMKV(), []);
   const _option = useMemo(() => ({ ...option, coreBridge }), [option]);
 
   useCoreBridgeListener(
@@ -45,43 +50,13 @@ export const CoreProviders = ({ children, option }: CoreProviderProps) => {
         case "getOS":
           coreBridge.respondToRoundTrip(event, Platform.OS);
           break;
-
-        case "core-navigation-push":
-          let params = data.functionArgs[0] as CoreNavigationPushParams;
-          if (params.options?.isNative) {
-            router.push({
-              pathname: params.path,
-              params: params.options?.params ?? {},
-            });
-          } else {
-            router.push({
-              pathname: option.RNWebviewScreenPath,
-              params: Object.assign(
-                { _webview_inner_path: params.path },
-                params.options?.params ?? {}
-              ),
-            });
-          }
-          coreBridge.respondToRoundTrip(event);
-          break;
-
-        case "core-navigation-pop":
-          if (router.canGoBack()) {
-            router.dismiss(1);
-
-            coreBridge.respondToRoundTrip(event);
-          } else {
-            coreBridge.respondToRoundTrip(
-              event,
-              undefined,
-              new Error("Can't go back.")
-            );
-          }
-
-          break;
       }
     }, [])
   );
+
+  useCoreNagivationEventHandler(coreBridge, option.RNWebviewScreenPath);
+  useCoreStorageEventHandler(coreBridge, mmkv);
+
   // const [bottomSheets, setBottomSheets] = useState<string[]>([]);
   // const bottomSheetRefs = useRef<Map<string, BottomSheetModalMethods | null>>(
   //   new Map()
@@ -110,9 +85,10 @@ export const CoreProviders = ({ children, option }: CoreProviderProps) => {
     <CoreContextProvider value={_option}>
       <GestureHandlerRootView>
         <CoreNavigationProvider bridge={coreBridge}>
-          <BottomSheetModalProvider>
-            {children}
-            {/* {bottomSheets.map((id, index) => {
+          <CoreStorageProvider bridge={coreBridge}>
+            <BottomSheetModalProvider>
+              {children}
+              {/* {bottomSheets.map((id, index) => {
             return (
               <BottomSheetModal
                 stackBehavior="push"
@@ -130,7 +106,8 @@ export const CoreProviders = ({ children, option }: CoreProviderProps) => {
               </BottomSheetModal>
             );
           })} */}
-          </BottomSheetModalProvider>
+            </BottomSheetModalProvider>
+          </CoreStorageProvider>
         </CoreNavigationProvider>
       </GestureHandlerRootView>
     </CoreContextProvider>

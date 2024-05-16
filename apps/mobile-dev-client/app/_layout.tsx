@@ -8,6 +8,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import Constants from "expo-constants";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { CoreProviders } from "@seoulcomix/core-mobile";
@@ -32,12 +33,16 @@ export default function RootLayout() {
     return null;
   }
 
+  // for local development
+  const url = new URL(`http://${Constants.expoConfig?.hostUri}`);
+  url.port = "5173";
+
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <CoreProviders
         option={{
           RNWebviewScreenPath: "/core-webview",
-          webviewBaseUrl: "http://localhost:5173/",
+          webviewBaseUrl: url.toString(),
         }}
       >
         <Stack>

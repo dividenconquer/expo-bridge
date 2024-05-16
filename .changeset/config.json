@@ -7,6 +7,7 @@
     "@seoulcomix/core-web",
     "@seoulcomix/core-navigation",
     "@seoulcomix/core-bridge",
+    "@seoulcomix/core-storage",
     "@seoulcomix/typescript-config"
   ]],
   "linked": [],

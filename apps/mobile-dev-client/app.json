@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tmp-expo",
-    "slug": "tmp-expo",
+    "name": "mobile-dev-client",
+    "slug": "mobile-dev-client",
     "version": "0.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,24 +13,30 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.seoulcomix.mobile-dev-client"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      },
+      "package": "com.seoulcomix.mobile_dev_client"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "93c311ab-ee12-4f2f-825e-48d88b746ea6"
+      }
+    },
+    "owner": "seoulcomix"
   }
 }

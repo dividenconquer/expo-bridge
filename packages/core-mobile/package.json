@@ -18,15 +18,15 @@
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf dist",
-    "watch": "tsup --watch"
+    "watch": "tsup --watch",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
     "@react-navigation/native": "^6.0.2",
-    "@seoulcomix/core-bridge": "0.0.1",
-    "@seoulcomix/core-navigation": "0.0.1",
     "@seoulcomix/typescript-config": "0.0.1",
     "@types/react": "^18.2.46",
     "expo-router": "~3.5.14",
@@ -38,13 +38,18 @@
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.6.1",
+    "@seoulcomix/core-bridge": "0.0.1",
+    "@seoulcomix/core-navigation": "0.0.1",
+    "@seoulcomix/core-storage": "0.0.1",
     "expo-web-browser": "~13.0.3",
-    "react-native-webview": "13.8.6"
+    "react-native-mmkv": "^2.12.2",
+    "react-native-webview": "13.8.6",
+    "expo": "~51.0.7",
+    "react": "18.2.0",
+    "react-native": "0.74.1"
   },
   "peerDependencies": {
     "@react-navigation/native": "^6.0.2",
-    "@seoulcomix/core-bridge": "0.0.1",
-    "@seoulcomix/core-navigation": "0.0.1",
     "expo-router": "~3.5.14",
     "react": "18.2.0",
     "react-native": "0.74.1",
