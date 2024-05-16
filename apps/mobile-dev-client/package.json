@@ -1,6 +1,6 @@
 {
   "name": "mobile-dev-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
@@ -19,7 +19,7 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
     "@react-navigation/native": "^6.0.2",
-    "@seoulcomix/core-mobile": "0.0.1",
+    "@seoulcomix/core-mobile": "0.1.0",
     "expo": "~51.0.7",
     "expo-constants": "~16.0.1",
     "expo-dev-client": "~4.0.14",

@@ -1,6 +1,6 @@
 {
   "name": "@seoulcomix/core-mobile",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "exports": {
     ".": {
       "import": {
@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "@react-navigation/native": "^6.0.2",
-    "@seoulcomix/typescript-config": "0.0.1",
+    "@seoulcomix/typescript-config": "0.1.0",
     "@types/react": "^18.2.46",
     "expo-router": "~3.5.14",
     "react": "^18.2.0",
@@ -38,9 +38,9 @@
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.6.1",
-    "@seoulcomix/core-bridge": "0.0.1",
-    "@seoulcomix/core-navigation": "0.0.1",
-    "@seoulcomix/core-storage": "0.0.1",
+    "@seoulcomix/core-bridge": "0.1.0",
+    "@seoulcomix/core-navigation": "0.1.0",
+    "@seoulcomix/core-storage": "0.1.0",
     "expo-web-browser": "~13.0.3",
     "react-native-mmkv": "^2.12.2",
     "react-native-webview": "13.8.6",
