@@ -1,6 +1,6 @@
 {
   "name": "@seoulcomix/core-navigation",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "exports": {
     ".": {
       "import": {
@@ -13,7 +13,9 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -22,14 +24,14 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@seoulcomix/typescript-config": "0.0.0",
+    "@seoulcomix/typescript-config": "0.0.1",
     "@types/react": "^18.2.46",
     "react": "^18.2.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@seoulcomix/core-bridge": "0.0.0"
+    "@seoulcomix/core-bridge": "0.0.1"
   },
   "peerDependencies": {
     "react": "18.2.0"
