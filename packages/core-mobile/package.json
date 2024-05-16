@@ -20,6 +20,7 @@
     "clean": "rm -rf dist",
     "watch": "tsup --watch"
   },
+  "files": ["dist"],
   "devDependencies": {
     "@react-navigation/native": "^6.0.2",
     "@seoulcomix/core-bridge": "*",
