@@ -1,3 +1,3 @@
-import { CoreWebview } from "@repo/core-mobile";
+import { CoreWebview } from "@seoulcomix/core-mobile";
 
 export default () => <CoreWebview isScreen />;

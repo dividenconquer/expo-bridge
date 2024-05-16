@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
-import { CoreProviders } from "@repo/core-mobile";
+import { CoreProviders } from "@seoulcomix/core-mobile";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo } from "react";
-import { CoreBridge, useCoreBridgeListener } from "@repo/core-bridge";
+import { CoreBridge, useCoreBridgeListener } from "@seoulcomix/core-bridge";
 import { postMessageToNative } from "../utils/bridge";
-import { CoreNavigationProvider } from "@repo/core-navigation";
+import { CoreNavigationProvider } from "@seoulcomix/core-navigation";
 
 type CoreWebviewContextType = {};
 

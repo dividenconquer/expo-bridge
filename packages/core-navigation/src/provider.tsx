@@ -1,4 +1,4 @@
-import { CoreBridge } from "@repo/core-bridge";
+import { CoreBridge } from "@seoulcomix/core-bridge";
 import { ReactNode, createContext, useContext } from "react";
 import React from "react";
 

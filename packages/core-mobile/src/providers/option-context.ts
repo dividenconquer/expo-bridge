@@ -1,6 +1,6 @@
 import React from "react";
 import { CoreProviderProps } from "./core";
-import { CoreBridge } from "@repo/core-bridge";
+import { CoreBridge } from "@seoulcomix/core-bridge";
 
 const CoreContext = React.createContext<
   | (CoreProviderProps["option"] & {

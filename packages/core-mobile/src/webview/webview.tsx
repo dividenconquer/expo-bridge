@@ -20,7 +20,7 @@ import WebView from "react-native-webview";
 import { useCoreContext } from "../providers/option-context";
 import { onMessageCallback } from "./on-message-callback";
 import { useCallback, useEffect } from "react";
-import { useCoreBridgeListener } from "@repo/core-bridge";
+import { useCoreBridgeListener } from "@seoulcomix/core-bridge";
 
 export type CoreWebviewProps = {
   isScreen?: boolean;

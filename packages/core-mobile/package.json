@@ -1,5 +1,5 @@
 {
-  "name": "@repo/core-mobile",
+  "name": "@seoulcomix/core-mobile",
   "version": "0.0.0",
   "exports": {
     ".": {
@@ -21,7 +21,7 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@repo/typescript-config": "*",
+    "@seoulcomix/typescript-config": "0.0.0",
     "@types/react": "^18.2.46",
     "@types/react-native": "0.73.0",
     "tsup": "^8.0.1",
@@ -33,8 +33,8 @@
     "react-native-webview": "13.8.6"
   },
   "peerDependencies": {
-    "@repo/core-navigation": "*",
-    "@repo/core-bridge": "*",
+    "@seoulcomix/core-navigation": "0.0.0",
+    "@seoulcomix/core-bridge": "0.0.0",
     "@react-navigation/native": "^6.0.2",
     "expo-router": "~3.5.11",
     "react": "18.2.0",

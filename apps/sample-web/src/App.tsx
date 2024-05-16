@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import { useCoreNavigation, useParams } from "@repo/core-navigation";
-import { useCoreWebviewContext } from "@repo/core-web";
+import { useCoreNavigation, useParams } from "@seoulcomix/core-navigation";
+import { useCoreWebviewContext } from "@seoulcomix/core-web";
 
 function App() {
   const [count, setCount] = useState(0);

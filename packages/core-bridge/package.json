@@ -1,5 +1,5 @@
 {
-  "name": "@repo/core-bridge",
+  "name": "@seoulcomix/core-bridge",
   "version": "0.0.0",
   "exports": {
     ".": {
@@ -21,7 +21,7 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@repo/typescript-config": "*",
+    "@seoulcomix/typescript-config": "0.0.0",
     "@types/react": "^18.2.46",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"

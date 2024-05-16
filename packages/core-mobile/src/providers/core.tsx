@@ -7,12 +7,12 @@ import {
   CoreBridgeEventType,
   useCoreBridgeListener,
   useCoreBridgeRoundTripListener,
-} from "@repo/core-bridge";
+} from "@seoulcomix/core-bridge";
 import { Platform } from "react-native";
 import {
   CoreNavigationProvider,
   CoreNavigationPushParams,
-} from "@repo/core-navigation";
+} from "@seoulcomix/core-navigation";
 import { router } from "expo-router";
 
 export type CoreProviderProps = {
