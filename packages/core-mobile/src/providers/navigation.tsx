@@ -3,13 +3,8 @@ import {
   useCoreBridgeRoundTripListener,
 } from "@seoulcomix/core-bridge";
 import { CoreNavigationPushParams } from "@seoulcomix/core-navigation";
-import {
-  CoreStorageGetJSONParams,
-  CoreStorageSetJSONParams,
-} from "@seoulcomix/core-storage";
 import { router } from "expo-router";
 import { useCallback } from "react";
-import { MMKV } from "react-native-mmkv";
 
 export const useCoreNagivationEventHandler = (
   coreBridge: CoreBridge,

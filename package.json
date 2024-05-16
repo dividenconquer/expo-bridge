@@ -16,7 +16,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "cs": "changeset",
     "publish-packages": "turbo run build lint && changeset version && changeset publish",
-    "postinstall": "manypkg fix"
+    "manypkg": "manypkg fix"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1",
