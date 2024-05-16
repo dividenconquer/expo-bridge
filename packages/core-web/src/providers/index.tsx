@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo } from "react";
 import { CoreBridge, useCoreBridgeListener } from "@seoulcomix/core-bridge";
 import { postMessageToNative } from "../utils/bridge";
 import { CoreNavigationProvider } from "@seoulcomix/core-navigation";
+import { CoreStorageProvider } from "@seoulcomix/core-storage";
 
 type CoreWebviewContextType = {};
 
@@ -46,7 +47,9 @@ export const CoreWebviewProvider: React.FC<CoreWebviewProviderProps> = ({
   return (
     <CoreWebviewContext.Provider value={_option}>
       <CoreNavigationProvider bridge={coreBridge}>
-        {children}
+        <CoreStorageProvider bridge={coreBridge}>
+          {children}
+        </CoreStorageProvider>
       </CoreNavigationProvider>
     </CoreWebviewContext.Provider>
   );

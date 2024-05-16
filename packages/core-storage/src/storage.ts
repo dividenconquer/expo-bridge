@@ -12,14 +12,14 @@ export type CoreStorageGetJSONParams = {
 export const useCoreStorage = () => {
   const { bridge } = useCoreStorageContext();
   return {
-    setJSON: (key: string, value: any) => {
-      bridge.runOnNative("core-storage-set-json", {
+    setJSON: async <T>(key: string, value: T) => {
+      await bridge.runOnNative("core-storage-set-json", {
         key,
         value,
       });
     },
-    getJSON: (key: string) => {
-      bridge.runOnNative("core-storage-get-json", {
+    getJSON: async <T>(key: string): Promise<T> => {
+      return await bridge.runOnNative("core-storage-get-json", {
         key,
       });
     },

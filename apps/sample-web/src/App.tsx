@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { useCoreNavigation, useParams } from "@seoulcomix/core-navigation";
 import { useCoreWebviewContext } from "@seoulcomix/core-web";
-
+import { useCoreStorage } from "@seoulcomix/core-storage";
 function App() {
   const [count, setCount] = useState(0);
   const params = useParams();
@@ -14,6 +14,7 @@ function App() {
   //   setEvents((e) => [...e, data]);
   // });
 
+  const { setJSON, getJSON } = useCoreStorage();
   return (
     <div
       className="safe-area-inset-container-sample"
@@ -23,6 +24,22 @@ function App() {
       {/* {events.map((event) => (
         <div>{JSON.stringify(event)}</div>
       ))} */}
+
+      <button
+        onClick={async () => {
+          await setJSON("test", { test: "test-wv" });
+          alert(JSON.stringify(await getJSON("test")));
+        }}
+      >
+        set json
+      </button>
+      <button
+        onClick={async () => {
+          alert(JSON.stringify(await getJSON("test")));
+        }}
+      >
+        get json
+      </button>
       <button
         onClick={() => {
           event

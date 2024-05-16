@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { router } from "expo-router";
 import { CoreWebview, useCoreContext } from "@seoulcomix/core-mobile";
 import { useCoreNavigation } from "@seoulcomix/core-navigation";
-
+import { useCoreStorage } from "@seoulcomix/core-storage";
 export default function HomeScreen() {
   // const [eventHistory, setEventHistory] = useState<string[]>([]);
   const { coreBridge } = useCoreContext();
@@ -14,6 +14,7 @@ export default function HomeScreen() {
 
   // useCoreBridgeListener(coreBridge, onEvent);
   const { push, pop } = useCoreNavigation();
+  const { getJSON, setJSON } = useCoreStorage();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -26,9 +27,10 @@ export default function HomeScreen() {
       </View> */}
 
       <Button
-        title="Emit event"
-        onPress={() => {
-          coreBridge.emitEvent("event2");
+        title="setJSON"
+        onPress={async () => {
+          await setJSON("test", { test: "test" });
+          alert(JSON.stringify(await getJSON("test")));
         }}
       />
       {/* <Button

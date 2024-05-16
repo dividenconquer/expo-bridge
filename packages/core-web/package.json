@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "@seoulcomix/core-bridge": "0.1.0",
-    "@seoulcomix/core-navigation": "0.1.0"
+    "@seoulcomix/core-navigation": "0.1.0",
+    "@seoulcomix/core-storage": "0.1.0"
   },
   "peerDependencies": {
     "react": "18.2.0"
