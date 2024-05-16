@@ -21,8 +21,15 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
+    "@react-navigation/native": "^6.0.2",
+    "@seoulcomix/core-bridge": "*",
+    "@seoulcomix/core-navigation": "*",
     "@seoulcomix/typescript-config": "0.0.0",
     "@types/react": "^18.2.46",
+    "expo-router": "~3.5.14",
+    "react": "^18.2.0",
+    "react-native": "0.74.1",
+    "react-native-gesture-handler": "~2.16.1",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
@@ -32,9 +39,9 @@
     "react-native-webview": "13.8.6"
   },
   "peerDependencies": {
-    "@seoulcomix/core-navigation": "0.0.0",
-    "@seoulcomix/core-bridge": "0.0.0",
     "@react-navigation/native": "^6.0.2",
+    "@seoulcomix/core-bridge": "0.0.0",
+    "@seoulcomix/core-navigation": "0.0.0",
     "expo-router": "~3.5.14",
     "react": "18.2.0",
     "react-native": "0.74.1",

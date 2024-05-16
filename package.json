@@ -1,4 +1,5 @@
 {
+  "name": "rnwv-base",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -14,14 +15,15 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "cs": "changeset",
-    "publish-packages": "turbo run build lint && changeset version && changeset publish"
+    "publish-packages": "turbo run build lint && changeset version && changeset publish",
+    "postinstall": "manypkg check"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@manypkg/cli": "latest",
     "prettier": "^3.1.1",
-    "turbo": "latest",
-    "@changesets/cli": "^2.27.1"
+    "turbo": "latest"
   },
-  "dependencies": {},
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
   }
