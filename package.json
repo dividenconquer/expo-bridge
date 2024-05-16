@@ -5,8 +5,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
+    "watch": "turbo run watch",
+    "dev:sample-web": "turbo run dev --filter=sample-web",
+    "dev:mobile:ios": "turbo run dev:ios --filter=mobile-dev-client",
+    "watch:core-mobile": "turbo run watch --filter=core-mobile",
     "build": "turbo run build",
+    "build:mobile": "turbo run build --filter mobile-dev-client",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
   },
@@ -17,5 +21,8 @@
   "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
   }
 }

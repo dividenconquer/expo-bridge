@@ -1,0 +1,44 @@
+{
+  "name": "@repo/core-mobile",
+  "version": "0.0.0",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "watch": "tsup --watch"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "@types/react": "^18.2.46",
+    "@types/react-native": "0.73.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@gorhom/bottom-sheet": "^4.6.1",
+    "expo-web-browser": "~13.0.3",
+    "react-native-webview": "13.8.6"
+  },
+  "peerDependencies": {
+    "@repo/core-navigation": "*",
+    "@repo/core-bridge": "*",
+    "@react-navigation/native": "^6.0.2",
+    "expo-router": "~3.5.11",
+    "react": "18.2.0",
+    "react-native": "0.74.1",
+    "react-native-gesture-handler": "~2.16.1"
+  }
+}
