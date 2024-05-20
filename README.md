@@ -1,6 +1,10 @@
+
+
+![DALL·E 2024-05-20 17 41 56 - A logo for 'ExpoBridge'  The design should feature modern, sleek typography with the word 'Expo' in a vibrant blue color and 'Bridge' in a bold, dark ](https://github.com/dividenconquer/expo-bridge/assets/47938592/56f2ecfb-9d2a-41f1-a0ca-8a94e20eb180)
 # Expo Bridge
 
 ## Why should I use this library?
+
 
 When developing with Expo or React Native, creating screens with web technologies often reduces development time compared to using RN (React Native). Additionally, achieving performance on both iOS and Android requires significant effort, which can be mitigated using WebView.
 
