@@ -15,5 +15,8 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
+    "@expo-bridge/sample-ui",
+    "sample-expo",
+    "sample-webview"
   ]
 }

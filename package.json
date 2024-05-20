@@ -1,5 +1,5 @@
 {
-  "name": "rnwv-base",
+  "name": "expo-bridge",
   "private": true,
   "workspaces": [
     "example/*",
@@ -9,7 +9,6 @@
     "watch": "turbo run watch",
     "example:webview": "turbo run dev --filter=sample-webview",
     "example:expo": "turbo run dev:ios --filter=sample-expo",
-    "watch:core-mobile": "turbo run watch --filter=core-mobile",
     "build": "turbo run build",
     "build:mobile": "turbo run build --filter=sample-expo",
     "clean": "turbo run clean && rm -rf node_modules",

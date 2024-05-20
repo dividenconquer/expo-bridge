@@ -13,8 +13,10 @@
     "@expo-bridge/core-navigation": "0.1.0",
     "@expo-bridge/core-storage": "0.1.0",
     "@expo-bridge/core-webview": "0.1.0",
+    "@expo-bridge/sample-ui": "*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-native-web": "^0.19.10"
   },
   "devDependencies": {
     "@types/react": "^18.2.46",
@@ -22,10 +24,12 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "babel-plugin-react-native-web": "^0.19.10",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.3.3",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-react-native-web": "^1.0.2"
   }
 }

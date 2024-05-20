@@ -11,5 +11,6 @@ export default defineConfig((options: Options) => ({
   format: ["cjs", "esm"],
   external: ["react"],
   dts: true,
+  loader: { ".js": "jsx" },
   ...options,
 }));

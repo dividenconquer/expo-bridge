@@ -1,31 +1,27 @@
-import { useState } from "react";
 import "./App.css";
-import { useCoreNavigation, useParams } from "@expo-bridge/core-navigation";
-import { useCoreStorage } from "@expo-bridge/core-storage";
-import { useCoreBridge } from "@expo-bridge/core-bridge";
+import { Banner, StorageSection } from "@expo-bridge/sample-ui";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const params = useParams();
-  const { push, pop } = useCoreNavigation();
-  const { bridge } = useCoreBridge();
-  // const [events, setEvents] = useState<unknown[]>([]);
-  // useCoreBridgeListener(event, (data: unknown) => {
-  //   setEvents((e) => [...e, data]);
-  // });
-
-  const { setJSON, getJSON } = useCoreStorage();
   return (
     <div
       className="safe-area-inset-container-sample"
-      style={{ paddingLeft: 20, paddingRight: 20 }}
+      style={{
+        paddingLeft: 20,
+        paddingRight: 20,
+        gap: 20,
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
-      <h1>RNWV Base Web Sample</h1>
+      <Banner from="webview" />
+      <StorageSection />
+      {/* <h1>RNWV Base Web Sample</h1> */}
+
       {/* {events.map((event) => (
         <div>{JSON.stringify(event)}</div>
       ))} */}
 
-      <button
+      {/* <button
         onClick={async () => {
           await setJSON("test", { test: "test-wv" });
           alert(JSON.stringify(await getJSON("test")));
@@ -49,7 +45,7 @@ function App() {
         }}
       >
         run roundtrip between native
-      </button>
+      </button> */}
       {/* <button
         onClick={() => {
           event.emitEvent("from webview!");
@@ -57,7 +53,7 @@ function App() {
       >
         emit event
       </button> */}
-      <div
+      {/* <div
         className="card"
         style={{
           gap: "1rem",
@@ -90,7 +86,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

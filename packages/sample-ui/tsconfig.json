@@ -4,5 +4,6 @@
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "strict": true
-  }
+  },
+  "typeRoots": ["types"]
 }
