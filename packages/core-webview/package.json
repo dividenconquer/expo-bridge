@@ -1,5 +1,5 @@
 {
-  "name": "@expo-bridge/core-web",
+  "name": "@expo-bridge/core-webview",
   "version": "0.1.0",
   "exports": {
     ".": {
