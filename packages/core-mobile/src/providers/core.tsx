@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { CoreContextProvider } from "./option-context";
 import { CoreBridgeProvider, useCoreBridge } from "@expo-bridge/core-bridge";
-import { MMKV } from "react-native-mmkv";
 import { useCoreStorageEventHandler } from "../event-handlers/storage";
 import { useCoreNagivationEventHandler } from "../event-handlers/navigation";
 
@@ -15,7 +14,6 @@ export type CoreProviderProps = {
 };
 
 const Providers = ({ children, option }: CoreProviderProps) => {
-  const mmkv = useMemo(() => new MMKV(), []);
   const { bridge } = useCoreBridge();
   const _option = useMemo(() => ({ ...option, bridge }), [option]);
 
@@ -42,7 +40,7 @@ const Providers = ({ children, option }: CoreProviderProps) => {
   // );
 
   useCoreNagivationEventHandler(option.RNWebviewScreenPath);
-  useCoreStorageEventHandler(mmkv);
+  useCoreStorageEventHandler();
 
   // const [bottomSheets, setBottomSheets] = useState<string[]>([]);
   // const bottomSheetRefs = useRef<Map<string, BottomSheetModalMethods | null>>(
