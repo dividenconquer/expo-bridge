@@ -2,9 +2,9 @@ import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 import React, { useCallback, useEffect, useState } from "react";
 import { router } from "expo-router";
-import { CoreWebview, useCoreContext } from "@seoulcomix/core-mobile";
-import { useCoreNavigation } from "@seoulcomix/core-navigation";
-import { useCoreStorage } from "@seoulcomix/core-storage";
+import { CoreWebview, useCoreContext } from "@expo-bridge/core-mobile";
+import { useCoreNavigation } from "@expo-bridge/core-navigation";
+import { useCoreStorage } from "@expo-bridge/core-storage";
 export default function HomeScreen() {
   // const [eventHistory, setEventHistory] = useState<string[]>([]);
   const { coreBridge } = useCoreContext();

@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 
-import { CoreWebview } from "@seoulcomix/core-mobile";
+import { CoreWebview } from "@expo-bridge/core-mobile";
 
 export default function TabTwoScreen() {
   return (

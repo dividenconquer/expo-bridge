@@ -1,23 +1,10 @@
-import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
-import React, { useCallback, useMemo } from "react";
+import React, { useMemo } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { CoreContextProvider } from "./option-context";
-import {
-  CoreBridge,
-  CoreBridgeEventType,
-  useCoreBridgeListener,
-  useCoreBridgeRoundTripListener,
-} from "@seoulcomix/core-bridge";
-import { Platform } from "react-native";
-import {
-  CoreNavigationProvider,
-  CoreNavigationPushParams,
-} from "@seoulcomix/core-navigation";
-import { router } from "expo-router";
+import { CoreBridgeProvider, useCoreBridge } from "@expo-bridge/core-bridge";
 import { MMKV } from "react-native-mmkv";
-import { useCoreStorageEventHandler } from "./storage";
-import { useCoreNagivationEventHandler } from "./navigation";
-import { CoreStorageProvider } from "@seoulcomix/core-storage";
+import { useCoreStorageEventHandler } from "../event-handlers/storage";
+import { useCoreNagivationEventHandler } from "../event-handlers/navigation";
 
 export type CoreProviderProps = {
   option: {
@@ -27,35 +14,35 @@ export type CoreProviderProps = {
   children: React.ReactNode;
 };
 
-export const CoreProviders = ({ children, option }: CoreProviderProps) => {
-  const coreBridge = useMemo(() => new CoreBridge(), []);
+const Providers = ({ children, option }: CoreProviderProps) => {
   const mmkv = useMemo(() => new MMKV(), []);
-  const _option = useMemo(() => ({ ...option, coreBridge }), [option]);
+  const { bridge } = useCoreBridge();
+  const _option = useMemo(() => ({ ...option, bridge }), [option]);
 
-  useCoreBridgeListener(
-    coreBridge,
-    useCallback((data: CoreBridgeEventType) => {
-      // 예시
-    }, [])
-  );
+  // useCoreBridgeListener(
+  //   bridge,
+  //   useCallback((data: CoreBridgeEventType) => {
+  //     // 예시
+  //   }, [])
+  // );
 
-  useCoreBridgeRoundTripListener(
-    coreBridge,
-    useCallback((data, event) => {
-      switch (data.functionName) {
-        case "test":
-          coreBridge.respondToRoundTrip(event, { args: data.functionArgs });
-          break;
+  // useCoreBridgeRoundTripListener(
+  //   bridge,
+  //   useCallback((data, event) => {
+  //     switch (data.functionName) {
+  //       case "test":
+  //         bridge.respondToRoundTrip(event, { args: data.functionArgs });
+  //         break;
 
-        case "getOS":
-          coreBridge.respondToRoundTrip(event, Platform.OS);
-          break;
-      }
-    }, [])
-  );
+  //       case "getOS":
+  //         bridge.respondToRoundTrip(event, Platform.OS);
+  //         break;
+  //     }
+  //   }, [])
+  // );
 
-  useCoreNagivationEventHandler(coreBridge, option.RNWebviewScreenPath);
-  useCoreStorageEventHandler(coreBridge, mmkv);
+  useCoreNagivationEventHandler(option.RNWebviewScreenPath);
+  useCoreStorageEventHandler(mmkv);
 
   // const [bottomSheets, setBottomSheets] = useState<string[]>([]);
   // const bottomSheetRefs = useRef<Map<string, BottomSheetModalMethods | null>>(
@@ -84,11 +71,9 @@ export const CoreProviders = ({ children, option }: CoreProviderProps) => {
   return (
     <CoreContextProvider value={_option}>
       <GestureHandlerRootView>
-        <CoreNavigationProvider bridge={coreBridge}>
-          <CoreStorageProvider bridge={coreBridge}>
-            <BottomSheetModalProvider>
-              {children}
-              {/* {bottomSheets.map((id, index) => {
+        {/* <BottomSheetModalProvider> */}
+        {children}
+        {/* {bottomSheets.map((id, index) => {
             return (
               <BottomSheetModal
                 stackBehavior="push"
@@ -106,10 +91,16 @@ export const CoreProviders = ({ children, option }: CoreProviderProps) => {
               </BottomSheetModal>
             );
           })} */}
-            </BottomSheetModalProvider>
-          </CoreStorageProvider>
-        </CoreNavigationProvider>
+        {/* </BottomSheetModalProvider> */}
       </GestureHandlerRootView>
     </CoreContextProvider>
+  );
+};
+
+export const CoreMobileProvider = ({ children, option }: CoreProviderProps) => {
+  return (
+    <CoreBridgeProvider>
+      <Providers option={option}>{children}</Providers>
+    </CoreBridgeProvider>
   );
 };

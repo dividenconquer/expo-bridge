@@ -3,12 +3,12 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [[
-    "@seoulcomix/core-mobile",
-    "@seoulcomix/core-web",
-    "@seoulcomix/core-navigation",
-    "@seoulcomix/core-bridge",
-    "@seoulcomix/core-storage",
-    "@seoulcomix/typescript-config"
+    "@expo-bridge/core-mobile",
+    "@expo-bridge/core-webview",
+    "@expo-bridge/core-navigation",
+    "@expo-bridge/core-bridge",
+    "@expo-bridge/core-storage",
+    "@expo-bridge/typescript-config"
   ]],
   "linked": [],
   "access": "public",

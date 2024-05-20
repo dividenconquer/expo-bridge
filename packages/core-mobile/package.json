@@ -1,5 +1,5 @@
 {
-  "name": "@seoulcomix/core-mobile",
+  "name": "@expo-bridge/core-mobile",
   "version": "0.1.0",
   "exports": {
     ".": {
@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "@react-navigation/native": "^6.0.2",
-    "@seoulcomix/typescript-config": "0.1.0",
+    "@expo-bridge/typescript-config": "0.1.0",
     "@types/react": "^18.2.46",
     "expo-router": "~3.5.14",
     "react": "^18.2.0",
@@ -38,15 +38,16 @@
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.6.1",
-    "@seoulcomix/core-bridge": "0.1.0",
-    "@seoulcomix/core-navigation": "0.1.0",
-    "@seoulcomix/core-storage": "0.1.0",
-    "expo-web-browser": "~13.0.3",
-    "react-native-mmkv": "^2.12.2",
-    "react-native-webview": "13.8.6",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@expo-bridge/core-bridge": "0.1.0",
+    "@expo-bridge/core-navigation": "0.1.0",
+    "@expo-bridge/core-storage": "0.1.0",
     "expo": "~51.0.7",
+    "expo-web-browser": "~13.0.3",
     "react": "18.2.0",
-    "react-native": "0.74.1"
+    "react-native": "0.74.1",
+    "react-native-mmkv": "^2.12.2",
+    "react-native-webview": "13.8.6"
   },
   "peerDependencies": {
     "@react-navigation/native": "^6.0.2",

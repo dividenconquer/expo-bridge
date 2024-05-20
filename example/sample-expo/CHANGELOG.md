@@ -5,10 +5,10 @@
 ### Patch Changes
 
 - Updated dependencies [5f65d33]
-  - @seoulcomix/core-mobile@0.1.0
+  - @expo-bridge/core-mobile@0.1.0
 
 ## 0.0.1
 
 ### Patch Changes
 
-- @seoulcomix/core-mobile@0.0.1
+- @expo-bridge/core-mobile@0.0.1

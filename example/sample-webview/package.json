@@ -1,5 +1,5 @@
 {
-  "name": "sample-web",
+  "name": "sample-webview",
   "private": true,
   "version": "0.0.2",
   "type": "module",
@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@seoulcomix/core-navigation": "0.1.0",
-    "@seoulcomix/core-web": "0.1.0",
+    "@expo-bridge/core-navigation": "0.1.0",
+    "@expo-bridge/core-web": "0.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

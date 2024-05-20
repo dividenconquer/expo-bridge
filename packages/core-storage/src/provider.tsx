@@ -1,10 +1,8 @@
-import { CoreBridge } from "@seoulcomix/core-bridge";
+import { CoreBridge } from "@expo-bridge/core-bridge";
 import { ReactNode, createContext, useContext } from "react";
 import React from "react";
 
-type CoreStorageContextType = {
-  bridge: CoreBridge;
-};
+type CoreStorageContextType = {};
 
 export const CoreStorageContext = createContext<
   CoreStorageContextType | undefined

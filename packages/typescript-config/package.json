@@ -1,5 +1,5 @@
 {
-  "name": "@seoulcomix/typescript-config",
+  "name": "@expo-bridge/typescript-config",
   "version": "0.1.0",
   "private": true,
   "publishConfig": {

@@ -1,5 +1,5 @@
 {
-  "extends": "@seoulcomix/typescript-config/react-library",
+  "extends": "@expo-bridge/typescript-config/react-library",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {

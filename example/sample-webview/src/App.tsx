@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import { useCoreNavigation, useParams } from "@seoulcomix/core-navigation";
-import { useCoreWebviewContext } from "@seoulcomix/core-web";
-import { useCoreStorage } from "@seoulcomix/core-storage";
+import { useCoreNavigation, useParams } from "@expo-bridge/core-navigation";
+import { useCoreStorage } from "@expo-bridge/core-storage";
+import { useCoreBridge } from "@expo-bridge/core-bridge";
+
 function App() {
   const [count, setCount] = useState(0);
   const params = useParams();
-  const { event } = useCoreWebviewContext();
   const { push, pop } = useCoreNavigation();
-
+  const { bridge } = useCoreBridge();
   // const [events, setEvents] = useState<unknown[]>([]);
   // useCoreBridgeListener(event, (data: unknown) => {
   //   setEvents((e) => [...e, data]);
@@ -42,7 +42,7 @@ function App() {
       </button>
       <button
         onClick={() => {
-          event
+          bridge
             .runOnNative("getOS")
             .then((res) => alert(JSON.stringify(res)))
             .catch((err) => console.error("error: ", err));

@@ -1,4 +1,4 @@
-# @seoulcomix/typescript-config
+# @expo-bridge/typescript-config
 
 ## 0.1.0
 

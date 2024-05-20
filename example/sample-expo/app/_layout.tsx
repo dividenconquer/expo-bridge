@@ -11,7 +11,7 @@ import "react-native-reanimated";
 import Constants from "expo-constants";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
-import { CoreProviders } from "@seoulcomix/core-mobile";
+import { CoreMobileProvider } from "@expo-bridge/core-mobile";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -39,7 +39,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <CoreProviders
+      <CoreMobileProvider
         option={{
           RNWebviewScreenPath: "/core-webview",
           webviewBaseUrl: url.toString(),
@@ -48,7 +48,7 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
-      </CoreProviders>
+      </CoreMobileProvider>
     </ThemeProvider>
   );
 }

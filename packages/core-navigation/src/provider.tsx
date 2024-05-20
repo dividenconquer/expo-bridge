@@ -1,10 +1,8 @@
-import { CoreBridge } from "@seoulcomix/core-bridge";
+import { CoreBridge } from "@expo-bridge/core-bridge";
 import { ReactNode, createContext, useContext } from "react";
 import React from "react";
 
-type CoreNavigationContextType = {
-  bridge: CoreBridge;
-};
+type CoreNavigationContextType = {};
 
 export const CoreNavigationContext = createContext<
   CoreNavigationContextType | undefined

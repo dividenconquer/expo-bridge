@@ -20,7 +20,7 @@ import WebView from "react-native-webview";
 import { useCoreContext } from "../providers/option-context";
 import { onMessageCallback } from "./on-message-callback";
 import { useCallback, useEffect } from "react";
-import { useCoreBridgeListener } from "@seoulcomix/core-bridge";
+import { useCoreBridge, useCoreBridgeListener } from "@expo-bridge/core-bridge";
 
 export type CoreWebviewProps = {
   isScreen?: boolean;
@@ -30,10 +30,11 @@ export function CoreWebview({ isScreen, ...viewProps }: CoreWebviewProps) {
   const { _webview_inner_path, ...params } = useLocalSearchParams();
   const webviewRef = React.useRef<WebView>(null);
   const coreContext = useCoreContext();
+  const { bridge } = useCoreBridge();
 
   // RN core bridge 에서 온 event 를 webview core event로 전달
   useCoreBridgeListener(
-    coreContext.coreBridge,
+    bridge,
     useCallback((event: any) => {
       if (!webviewRef.current) return;
       const run = `
@@ -77,7 +78,7 @@ export function CoreWebview({ isScreen, ...viewProps }: CoreWebviewProps) {
         style={{ flex: 1, width: "100%", backgroundColor: "white" }}
         onMessage={(event) => {
           const message = JSON.parse(event.nativeEvent.data);
-          coreContext.coreBridge.propagate(message);
+          bridge.propagate(message);
         }}
         // bounce 일 경우에 배경 색깔
         // style: backgroundColor: 'red'

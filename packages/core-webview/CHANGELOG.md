@@ -1,16 +1,11 @@
-# @expo-bridge/core-mobile
+# @expo-bridge/core-web
 
 ## 0.1.0
-
-### Minor Changes
-
-- 5f65d33: bump
 
 ### Patch Changes
 
 - @expo-bridge/core-navigation@0.1.0
 - @expo-bridge/core-bridge@0.1.0
-- @expo-bridge/core-storage@0.1.0
 
 ## 0.0.1
 

@@ -1,5 +1,5 @@
 {
-  "extends": "@seoulcomix/typescript-config/vite",
+  "extends": "@expo-bridge/typescript-config/vite",
   "include": ["src"],
   "compilerOptions": {
     "jsx": "react-jsx"

@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
 import { Button, SafeAreaView, Text, View } from "react-native";
-import { useCoreNavigation } from "@seoulcomix/core-navigation";
-import { useCoreContext } from "@seoulcomix/core-mobile";
+import { useCoreNavigation } from "@expo-bridge/core-navigation";
+import { useCoreContext } from "@expo-bridge/core-mobile";
 
 export default () => {
   const context = useCoreContext();

@@ -1,5 +1,5 @@
 {
-  "name": "@seoulcomix/ui",
+  "name": "@expo-bridge/ui",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@seoulcomix/typescript-config": "0.1.0",
+    "@expo-bridge/typescript-config": "0.1.0",
     "@types/react": "^18.2.46",
     "@types/react-native": "^0.73.0",
     "react": "^18.2.0",

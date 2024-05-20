@@ -2,16 +2,16 @@
   "name": "rnwv-base",
   "private": true,
   "workspaces": [
-    "apps/*",
+    "example/*",
     "packages/*"
   ],
   "scripts": {
     "watch": "turbo run watch",
-    "dev:sample-web": "turbo run dev --filter=sample-web",
-    "dev:mobile:ios": "turbo run dev:ios --filter=mobile-dev-client",
+    "example:webview": "turbo run dev --filter=sample-webview",
+    "example:expo": "turbo run dev:ios --filter=sample-expo",
     "watch:core-mobile": "turbo run watch --filter=core-mobile",
     "build": "turbo run build",
-    "build:mobile": "turbo run build --filter mobile-dev-client",
+    "build:mobile": "turbo run build --filter=sample-expo",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "cs": "changeset",

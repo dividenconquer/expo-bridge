@@ -1,16 +1,12 @@
 import React from "react";
 import { CoreProviderProps } from "./core";
-import { CoreBridge } from "@seoulcomix/core-bridge";
 
 const CoreContext = React.createContext<
-  | (CoreProviderProps["option"] & {
-      coreBridge: InstanceType<typeof CoreBridge>;
-    })
-  | undefined
+  CoreProviderProps["option"] | undefined
 >(undefined);
 
 export const CoreContextProvider = CoreContext.Provider;
-export const CoreContextConsumer = CoreContext.Consumer;
+
 export const useCoreContext = () => {
   const context = React.useContext(CoreContext);
   if (!context) {

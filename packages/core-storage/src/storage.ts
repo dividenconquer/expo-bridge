@@ -1,3 +1,4 @@
+import { useCoreBridge } from "@expo-bridge/core-bridge";
 import { useCoreStorageContext } from "./provider";
 
 export type CoreStorageSetJSONParams = {
@@ -10,7 +11,7 @@ export type CoreStorageGetJSONParams = {
 };
 
 export const useCoreStorage = () => {
-  const { bridge } = useCoreStorageContext();
+  const { bridge } = useCoreBridge();
   return {
     setJSON: async <T>(key: string, value: T) => {
       await bridge.runOnNative("core-storage-set-json", {

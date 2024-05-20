@@ -1,32 +1,30 @@
 import {
-  CoreBridge,
+  useCoreBridge,
   useCoreBridgeRoundTripListener,
-} from "@seoulcomix/core-bridge";
-import {
+} from "@expo-bridge/core-bridge";
+import type {
   CoreStorageGetJSONParams,
   CoreStorageSetJSONParams,
-} from "@seoulcomix/core-storage";
+} from "@expo-bridge/core-storage";
 import { useCallback } from "react";
 import { MMKV } from "react-native-mmkv";
 
-export const useCoreStorageEventHandler = (
-  coreBridge: CoreBridge,
-  mmkv: MMKV
-) => {
+export const useCoreStorageEventHandler = (storage: MMKV) => {
+  const { bridge } = useCoreBridge();
   useCoreBridgeRoundTripListener(
-    coreBridge,
+    bridge,
     useCallback((data, event) => {
       if (data.functionName === "core-storage-set-json") {
         let params = data.functionArgs[0] as CoreStorageSetJSONParams;
-        mmkv.set(params.key, JSON.stringify(params.value));
-        coreBridge.respondToRoundTrip(event);
+        storage.set(params.key, JSON.stringify(params.value));
+        bridge.respondToRoundTrip(event);
       } else if (data.functionName === "core-storage-get-json") {
         let params = data.functionArgs[0] as CoreStorageGetJSONParams;
-        let value = mmkv.getString(params.key);
+        let value = storage.getString(params.key);
         if (value) {
-          coreBridge.respondToRoundTrip(event, JSON.parse(value));
+          bridge.respondToRoundTrip(event, JSON.parse(value));
         } else {
-          coreBridge.respondToRoundTrip(event, undefined);
+          bridge.respondToRoundTrip(event, undefined);
         }
       }
     }, [])

@@ -1,4 +1,4 @@
-import { useCoreNavigationContext } from "./provider";
+import { useCoreBridge } from "@expo-bridge/core-bridge";
 
 export type CoreNavigationPushParams = {
   path: string;
@@ -8,7 +8,7 @@ export type CoreNavigationPushParams = {
 export type CoreNavigationPopParams = {};
 
 export const useCoreNavigation = () => {
-  const { bridge } = useCoreNavigationContext();
+  const { bridge } = useCoreBridge();
   return {
     push: (path: string, options?: CoreNavigationPushParams["options"]) => {
       bridge.runOnNative("core-navigation-push", {
