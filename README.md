@@ -2,8 +2,6 @@
 
 ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-  
-[![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-mobile.svg?style=flat)]()
 
 ## Why should I use this library?
 
@@ -28,10 +26,19 @@ This library resolves these issues through event propagation. Both native and ea
 
 For example, the `push` and `pop` functions in the `@expo-bridge/core-navigation` package emit events to the bridge provided by `@expo-bridge/core-bridge` without directly accessing the Expo router object. These events are captured by predefined listeners in `@expo-bridge/core-mobile`, which can add a new WebView or native screen to the navigation stack.
 
+## Versions
+| Available for | Package     | Version |
+| ---      | ---       | --- |
+| Expo  | `@expo-bridge/core-mobile` | [![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-mobile.svg?style=flat)]() |  
+| Web | `@expo-bridge/core-webview` | [![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-webview.svg?style=flat)]() |  
+| Expo / Web | `@expo-bridge/core-bridge` | [![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-bridge.svg?style=flat)]() |  
+| Expo / Web | `@expo-bridge/core-navigation` | [![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-navigation.svg?style=flat)]() |  
+| Expo / Web | `@expo-bridge/core-storage` | [![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-storage.svg?style=flat)]() |  
+
 ## Usage
 
-1. **Install `@expo-bridge/core-mobile` in the Expo project.**
-2. **Install `@expo-bridge/core-webview` in the WebView project.**
+1. **Run `yarn add @expo-bridge/core-mobile` in the Expo project.**
+2. **Run `yarn add @expo-bridge/core-webview` in the WebView project.**
 
 Then, install any necessary packages to both expo and webview. Refer to each package's documentation for installation and usage details.
 
