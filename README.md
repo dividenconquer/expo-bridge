@@ -4,7 +4,6 @@
 
 ## Why should I use this library?
 
-
 When developing with Expo or React Native, creating screens with web technologies often reduces development time compared to using RN (React Native). Additionally, achieving performance on both iOS and Android requires significant effort, which can be mitigated using WebView.
 
 **Development Speed:**
@@ -37,6 +36,10 @@ Then, install any necessary packages to both expo and webview. Refer to each pac
 
 - `@expo-bridge/core-navigation`
 - `@expo-bridge/core-storage`
+
+- WIP
+  - `@expo-bridge/theme`
+  - `@expo-bridge/auth`
 
 ## Contributing
 
