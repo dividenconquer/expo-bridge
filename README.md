@@ -1,6 +1,5 @@
+![Frame 2](https://github.com/dividenconquer/expo-bridge/assets/47938592/11f7be72-e0a2-4204-a211-463f0a46194c)
 
-
-![DALL·E 2024-05-20 17 41 56 - A logo for 'ExpoBridge'  The design should feature modern, sleek typography with the word 'Expo' in a vibrant blue color and 'Bridge' in a bold, dark ](https://github.com/dividenconquer/expo-bridge/assets/47938592/56f2ecfb-9d2a-41f1-a0ca-8a94e20eb180)
 # Expo Bridge
 
 ## Why should I use this library?
