@@ -1,6 +1,9 @@
 ![Frame 2](https://github.com/dividenconquer/expo-bridge/assets/47938592/11f7be72-e0a2-4204-a211-463f0a46194c)
 
-# Expo Bridge
+![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+  
+[![NPM Version](https://img.shields.io/npm/v/@expo-bridge/core-mobile.svg?style=flat)]()
 
 ## Why should I use this library?
 
