@@ -26,12 +26,18 @@
     "dist"
   ],
   "devDependencies": {
-    "@expo-bridge/typescript-config": "0.1.0",
-    "@types/react": "~18.2.45",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3",
     "@expo-bridge/core-navigation": "0.1.0",
-    "@expo-bridge/core-storage": "0.1.0"
+    "@expo-bridge/core-storage": "0.1.0",
+    "@expo-bridge/typescript-config": "0.1.0",
+    "@react-navigation/native": "^6.0.2",
+    "@types/react": "^18.2.46",
+    "expo": "~51.0.8",
+    "expo-router": "~3.5.14",
+    "react": "^18.2.0",
+    "react-native": "0.74.1",
+    "react-native-gesture-handler": "~2.16.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@expo-bridge/core-bridge": "0.1.0",
@@ -42,8 +48,8 @@
   },
   "peerDependencies": {
     "@react-navigation/native": "^6.0.2",
-    "expo-router": "~3.5.14",
     "expo": "~51.0.8",
+    "expo-router": "~3.5.14",
     "react": "18.2.0",
     "react-native": "0.74.1",
     "react-native-gesture-handler": "~2.16.1"
