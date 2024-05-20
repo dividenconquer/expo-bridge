@@ -1,5 +1,4 @@
 import {
-  CoreBridge,
   useCoreBridge,
   useCoreBridgeRoundTripListener,
 } from "@expo-bridge/core-bridge";

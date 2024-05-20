@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@expo-bridge/typescript-config": "0.1.0",
-    "@types/react": "^18.2.46",
+    "@types/react": "~18.2.45",
     "react": "^18.2.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
