@@ -1,4 +1,4 @@
-# @expo-bridge/core-web
+# @expo-bridge/core-webview
 
 ## 0.1.0
 
