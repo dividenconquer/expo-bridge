@@ -8,8 +8,8 @@
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@expo-bridge/core-storage": "0.1.0",
-    "@expo-bridge/typescript-config": "0.1.0",
+    "@expo-bridge/core-storage": "0.1.1",
+    "@expo-bridge/typescript-config": "0.1.1",
     "@types/react": "^18.2.46",
     "@types/react-native": "^0.73.0",
     "typescript": "^5.3.3"

@@ -1,6 +1,6 @@
 {
   "name": "@expo-bridge/core-bridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "exports": {
     ".": {
       "import": {
@@ -24,7 +24,7 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@expo-bridge/typescript-config": "0.1.0",
+    "@expo-bridge/typescript-config": "0.1.1",
     "@types/react": "^18.2.46",
     "react": "^18.2.0",
     "tsup": "^8.0.1",

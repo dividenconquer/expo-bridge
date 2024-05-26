@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@expo-bridge/core-navigation": "0.1.0",
-    "@expo-bridge/core-storage": "0.1.0",
-    "@expo-bridge/core-webview": "0.1.0",
+    "@expo-bridge/core-navigation": "0.1.1",
+    "@expo-bridge/core-storage": "0.1.1",
+    "@expo-bridge/core-webview": "0.1.1",
     "@expo-bridge/sample-ui": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -1,6 +1,6 @@
 {
   "name": "@expo-bridge/core-mobile",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "exports": {
     ".": {
       "import": {
@@ -26,9 +26,9 @@
     "dist"
   ],
   "devDependencies": {
-    "@expo-bridge/core-navigation": "0.1.0",
-    "@expo-bridge/core-storage": "0.1.0",
-    "@expo-bridge/typescript-config": "0.1.0",
+    "@expo-bridge/core-navigation": "0.1.1",
+    "@expo-bridge/core-storage": "0.1.1",
+    "@expo-bridge/typescript-config": "0.1.1",
     "@react-navigation/native": "^6.0.2",
     "@types/react": "^18.2.46",
     "expo": "~51.0.8",
@@ -40,7 +40,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@expo-bridge/core-bridge": "0.1.0",
+    "@expo-bridge/core-bridge": "0.1.1",
     "@gorhom/bottom-sheet": "^4.6.1",
     "@react-native-async-storage/async-storage": "1.23.1",
     "expo-web-browser": "~13.0.3",
