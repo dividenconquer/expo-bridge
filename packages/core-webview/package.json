@@ -1,6 +1,6 @@
 {
   "name": "@expo-bridge/core-webview",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "exports": {
     ".": {
       "import": {
@@ -24,16 +24,16 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@expo-bridge/core-navigation": "0.1.0",
-    "@expo-bridge/core-storage": "0.1.0",
-    "@expo-bridge/typescript-config": "0.1.0",
+    "@expo-bridge/core-navigation": "0.1.1",
+    "@expo-bridge/core-storage": "0.1.1",
+    "@expo-bridge/typescript-config": "0.1.1",
     "@types/react": "^18.2.46",
     "react": "^18.2.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@expo-bridge/core-bridge": "0.1.0"
+    "@expo-bridge/core-bridge": "0.1.1"
   },
   "peerDependencies": {
     "react": "18.2.0"

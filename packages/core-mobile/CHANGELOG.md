@@ -1,5 +1,12 @@
 # @expo-bridge/core-mobile
 
+## 0.1.1
+
+### Patch Changes
+
+- f1d4a84: do not use mmkv
+  - @expo-bridge/core-bridge@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes
