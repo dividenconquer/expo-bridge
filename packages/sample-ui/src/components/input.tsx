@@ -1,4 +1,3 @@
-import { LegacyRef, forwardRef } from "react";
 import {
   Control,
   FieldPath,
