@@ -1,7 +1,6 @@
-import { Text, TextInput, View } from "react-native";
+import { Text, View } from "react-native";
 import { Button, Input } from "../components";
 import { useCoreStorage } from "@expo-bridge/core-storage";
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 
 export const StorageSection = () => {
